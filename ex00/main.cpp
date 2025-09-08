@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 17:04:57 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/08 17:05:23 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/08 17:11:41 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,6 @@ int main( void )
     std::cout << c.getRawBits() << std::endl;
     return 0;
 }
+
+
+//revisar y comparar resultado con output esperado, es posible que el subject este mal.
