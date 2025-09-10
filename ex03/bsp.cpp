@@ -6,10 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 14:02:48 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/10 15:55:03 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/10 16:10:30 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
 #include "Point.hpp"
 
 
@@ -46,7 +47,7 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
     APC = getArea (a, point, c);
     ABP = getArea(a, b, point);
 
-    p = PBC + APC, ABP;
+    p = PBC + APC + ABP;
     
     if(p > ABC)
         return(false);
