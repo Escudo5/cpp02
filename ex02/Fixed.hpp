@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 13:23:18 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/09 13:39:16 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/10 12:35:37 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ class Fixed
         int getRawBits(void) const;
         void setRawBits(int const raw);
 
-        // float toFloat(void)const;
-        // int toInt(void)const;
+        
+        float toFloat(void)const;
+        int toInt(void)const;
         
         //comparison
         bool operator>(const Fixed &copy)const;
@@ -49,11 +50,25 @@ class Fixed
         Fixed operator*(const Fixed &copy)const;
         Fixed operator/(const Fixed &copy)const;
 
+        //Pre-increment
+        Fixed &operator++(); //devuelve & porque el objeto ya  esta modificado..
+        Fixed &operator--();
+
+        //Post-increment
+        Fixed operator++(int); //devuelve fixed(copia) porque necesito devolver el original.
+        Fixed operator--(int);
 
 
+        //Min and max
 
+        static Fixed &min(Fixed &a, Fixed &b);
+        static const Fixed &min(const Fixed &a, const Fixed &b);
+        static Fixed &max(Fixed &a, Fixed &b);
+        static const Fixed &max(const Fixed &a, const Fixed &b);
 
+        //tenemos constantes y normales pporque a veces trabbajamos con objetos modifcables y otras con constantes.
 
+        
     private:
         int fixedNumberValue;
         static const int fractional = 8;
