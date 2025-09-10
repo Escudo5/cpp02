@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 10:52:10 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/09 11:27:26 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/10 15:21:21 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ Fixed::Fixed(const Fixed &copy)
 
 Fixed &Fixed::operator=(const Fixed &copy)
 {
+    std::cout << "Copy assignmetn operator called" << std::endl;
     fixedNumberValue = copy.fixedNumberValue;
     return(*this);
 }
