@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 13:39:35 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/10 12:41:15 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/10 17:06:32 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,9 +197,6 @@ const Fixed &Fixed:: max(const Fixed &a, const Fixed &b)
     else
         return(b);
 }
-
-
-
 
 
 //creamos una copia que modificamos y devolvemos el original.
